@@ -19,16 +19,16 @@
   <meta name="author" content="Lotus">
   <meta name="keywords" content="Mathematics, English Study, Coding, Computer Science, Personal Growth">
   
-    <meta name="description" content="“why do系列”记录搭建过程">
+    <meta name="description" content="“why do系列”记录搭建过程~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建博客过程回忆以及我的问题-解决">
 <meta property="og:url" content="http://lotus.github.io/2025/12/14/about%20blog/index.html">
 <meta property="og:site_name" content="Lotus">
-<meta property="og:description" content="“why do系列”记录搭建过程">
+<meta property="og:description" content="“why do系列”记录搭建过程~">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png">
 <meta property="article:published_time" content="2025-12-14T10:10:57.404Z">
-<meta property="article:modified_time" content="2025-12-14T10:32:04.164Z">
+<meta property="article:modified_time" content="2025-12-19T14:48:08.685Z">
 <meta property="article:author" content="Lotus">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -278,64 +278,64 @@
             
               <div class="markdown-body">
                 
-                <h1 id="“why-do系列”"><a href="#“why-do系列”" class="headerlink" title="“why do系列”"></a>“why do系列”</h1><p>记录搭建过程</p>
+                <h1 id="“why-do系列”"><a href="#“why-do系列”" class="headerlink" title="“why do系列”"></a>“why do系列”</h1><p>记录搭建过程~</p>
 <span id="more"></span>
-<p>想直接看过程的点这 [这里](# 那么过程就是),在实操中出现的问题以注释内容实现，方便跳转查看</p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
-<h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><h3 id="先搞懂博客是啥"><a href="#先搞懂博客是啥" class="headerlink" title="先搞懂博客是啥"></a>先搞懂博客是啥</h3><p>可以把博客理解成**“你的个人网页”**——它本质是一堆“静态文件”（就是普通的 HTML、CSS、JS、图片这些文件）<a href="#%E8%A1%A5%E5%85%85">不懂的跳到这</a>，只要把这些文件放到“能被公网访问的地方”，别人就能通过网址打开你的博客。</p>
+<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><h2 id="先搞懂博客是啥"><a href="#先搞懂博客是啥" class="headerlink" title="先搞懂博客是啥"></a>先搞懂博客是啥</h2><p>可以把博客理解成**“你的个人网页”**——它本质是一堆“静态文件”(就是普通的 HTML、CSS、JS、图片这些文件)，只要把这些文件放到“能被公网访问的地方”，别人就能通过网址打开你的博客。</p>
 <p>问题来了：<strong>怎么得到这堆 “静态文件”？怎么让它们被公网访问？</strong></p>
 <p>这就是搭建博客的核心：<strong>生成静态文件，托管静态文件</strong></p>
-<p>&lt;span id&#x3D;”补充”&gt;补充：</span></p>
+<p>补充:</p>
 <p>把博客页面想象成 “你写的一篇带格式的作文”，这HTML、CSS、JS、图片文件就是组成这篇作文的不同部分：</p>
-<p>**HTML 文件：**HyperText Markup Language（超文本标记语言）</p>
-<p>是 “作文的文字内容本身”</p>
-<p>  比如博客的标题、你的文章内容、导航栏的 “首页 &#x2F; 分类 &#x2F; 关于我” 这些文字信息，都是写在 HTML 文件里的 —— 它是页面的 “骨架”，决定了页面里 “有什么内容”。</p>
+<ol>
+<li><strong>HTML 文件</strong>: HyperText Markup Language(超文本标记语言)<br>是“作文的文字内容本身”</li>
+</ol>
+<p>&nbsp;&nbsp;比如博客的标题、你的文章内容、导航栏的 “首页 &#x2F; 分类 &#x2F; 关于我” 这些文字信息，都是写在 HTML 文件里的 —— 它是页面的 “骨架”，决定了页面里 “有什么内容”。</p>
 <ul>
-<li><p>“HyperText（超文本）”：指的是不仅能放普通文字，还能放链接、图片、视频这些 “超越</p>
-<p>  纯文本” 的内容；</p>
+<li><p>“HyperText（超文本）”：指的是不仅能放普通文字，还能放链接、图片、视频这些 “超越纯文本” 的内容；</p>
 </li>
-<li><p>“Markup Language（标记语言）”：就是用<code>&lt;title&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;img&gt;</code>这类 “标记标签” 来</p>
-<p>  义内容的结构（比如哪段是标题、哪段是正文）。</p>
+<li><p>“Markup Language（标记语言）”：就是用<code>&lt;title&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;img&gt;</code>这类 “标记标签” 来定义内容的结构（比如哪段是标题、哪段是正文）。</p>
 </li>
 </ul>
-<p>**CSS 文件：**Cascading Style Sheets（层叠样式表）</p>
-<p>是 “作文的排版和样式”</p>
-<p>  比如标题要多大字号、正文是什么颜色、导航栏要放在页面顶部还是侧边、背景要不要加颜色 —— 这些 “美观和排版” 的规则，都是写在 CSS 文件里的，它是页面的 “皮肤”，决定了内容 “长什么样子”。</p>
+<ol start="2">
+<li><strong>CSS 文件</strong>： Cascading Style Sheets（层叠样式表）<br>是 “作文的排版和样式”</li>
+</ol>
+<p>&nbsp;&nbsp;比如标题要多大字号、正文是什么颜色、导航栏要放在页面顶部还是侧边、背景要不要加颜色 —— 这些 “美观和排版” 的规则，都是写在 CSS 文件里的，它是页面的 “皮肤”，决定了内容 “长什么样子”。</p>
 <ul>
-<li><p>“Cascading（层叠）”：多个 CSS 样式可以叠加生效（比如你给文字设了红色，又设了加</p>
-<p>  粗，两个样式会一起显示）；</p>
+<li><p>“Cascading（层叠）”：多个 CSS 样式可以叠加生效（比如你给文字设了红色，又设了加粗，两个样式会一起显示）；</p>
 </li>
 <li><p>“Style Sheets（样式表）”：就是把所有样式规则写在一个文件里，统一管理页面的外观。</p>
 </li>
 </ul>
-<p><strong>JS 文件</strong>：JavaScript（和java没关系）</p>
-<p>是 “作文的互动功能”</p>
-<p>  比如你点 “评论” 按钮会弹出输入框、点 “回到顶部” 按钮页面会自动滚到顶部、博客的访问量会实时变化 —— 这些 “点一下就有反应” 的功能，是靠 JS 文件实现的，它是页面的 “手脚”，决定了页面 “能做什么互动”。</p>
-<p>  如果说HTML 和 CSS 是 “静态的剧本”，页面加载出来就按剧本摆好样子；而 JS 是 “导演”，在页面运行时动态修改HTML的内容、CSS的样式，更具你的点击、输入等操作，执行对应的交互逻辑。</p>
+<ol start="3">
+<li><strong>JS 文件</strong>：JavaScript（和java没关系）<br>是 “作文的互动功能”</li>
+</ol>
+<p> &nbsp;&nbsp; 比如你点 “评论” 按钮会弹出输入框、点 “回到顶部” 按钮页面会自动滚到顶部、博客的访问量会实时变化 —— 这些 “点一下就有反应” 的功能，是靠 JS 文件实现的，它是页面的 “手脚”，决定了页面 “能做什么互动”。</p>
+<p>  &nbsp;&nbsp;如果说HTML 和 CSS 是 “静态的剧本”，页面加载出来就按剧本摆好样子；而 JS 是 “导演”，在页面运行时动态修改HTML的内容、CSS的样式，更具你的点击、输入等操作，执行对应的交互逻辑。</p>
 <p><strong>总之：</strong></p>
 <p>JS能动态修改HTML、CSS，实现页面的交互逻辑。</p>
-<p><strong>图片文件</strong>：</p>
-<p>是 “作文里贴的照片”</p>
-<p>  比如你博客的头像、文章里插入的截图、背景图 —— 这些可视化的内容，就是普通的图片</p>
-<p>文件</p>
-<p>（比如 JPG&#x2F;PNG 格式），是页面的 “装饰素材”。</p>
-<h3 id="”生成静态文件“的逻辑（为啥需要hexo和node-js）"><a href="#”生成静态文件“的逻辑（为啥需要hexo和node-js）" class="headerlink" title="”生成静态文件“的逻辑（为啥需要hexo和node.js）"></a>”生成静态文件“的逻辑（为啥需要hexo和node.js）</h3><p>如果不用工具，你就得自己写HTML&#x2F;CSS&#x2F;JS&#x2F;来做博客页面–但对新手来说太麻烦了。</p>
-<p>而<strong>Hexo 就是帮你 “自动生成静态文件” 的工具</strong>：</p>
+<ol start="4">
+<li><strong>图片文件</strong>：<br>是 “作文里贴的照片”</li>
+</ol>
+<p>  &nbsp;&nbsp;比如你博客的头像、文章里插入的截图、背景图 —— 这些可视化的内容，就是普通的图片文件（比如 JPG&#x2F;PNG 格式），是页面的 “装饰素材”。</p>
+<h2 id="”生成静态文件“的逻辑（为啥需要hexo和node-js）"><a href="#”生成静态文件“的逻辑（为啥需要hexo和node-js）" class="headerlink" title="”生成静态文件“的逻辑（为啥需要hexo和node.js）"></a>”生成静态文件“的逻辑（为啥需要hexo和node.js）</h2><p>如果不用工具，你就得自己写HTML&#x2F;CSS&#x2F;JS&#x2F;来做博客页面–但对新手来说太麻烦了。<br>而<strong>Hexo 就是帮你 “自动生成静态文件” 的工具</strong>：</p>
 <ul>
 <li><p>你只需要写 Markdown 格式的文章（比如<code>我的第一篇博客.md</code>），Hexo 会帮你把 Markdown 转换成 HTML 页面；</p>
 </li>
 <li><p>你选个 Hexo 主题（比如 Fluid），Hexo 会自动把主题的 CSS&#x2F;JS 和你的文章拼接成完整的博客页面；</p>
 </li>
 <li><p>最终 Hexo 会把这些 “拼接好的页面、样式、脚本” 打包成一堆静态文件——“带样式、带互动、能直接打开的文件”（存在你电脑的<code>public</code>文件夹里）。</p>
-<pre><code class="hljs"> 但 Hexo 是 “用 Node.js 写的工具”—— 就像 “用英语写的说明书，得懂英语的人才读”，Hexo 的代码只有在`Node.js环境`里才能运行，所以你必须先装 Node.js，Hexo 才能 “听懂” 你输入的`hexo init`/`hexo s`这些命令。
+<pre><code class="hljs"> 但 Hexo 是 “用 Node.js 写的工具”—— 就像 “用英语写的说明书，得懂英语的人才读”，Hexo 的代码只有在`Node.js环境`里才能运行，所以你必须先装 Node.js，Hexo 才能 “听懂” 你输入的hexo init/hexo s这些命令。
 </code></pre>
 </li>
 </ul>
-<h3 id="”让静态文件被公网访问“的逻辑-为啥我们需要git和GitHub"><a href="#”让静态文件被公网访问“的逻辑-为啥我们需要git和GitHub" class="headerlink" title="”让静态文件被公网访问“的逻辑(为啥我们需要git和GitHub)"></a>”让静态文件被公网访问“的逻辑(为啥我们需要git和GitHub)</h3><p>你电脑里的public文件夹里已经有了博客的静态文件，但别人没法直接访问你电脑里的文件 —— 得把这堆文件放到 “公网服务器” 上。</p>
+<h2 id="”让静态文件被公网访问“的逻辑-为啥我们需要git和GitHub"><a href="#”让静态文件被公网访问“的逻辑-为啥我们需要git和GitHub" class="headerlink" title="”让静态文件被公网访问“的逻辑(为啥我们需要git和GitHub)"></a>”让静态文件被公网访问“的逻辑(为啥我们需要git和GitHub)</h2><p>你电脑里的public文件夹里已经有了博客的静态文件，但别人没法直接访问你电脑里的文件 —— 得把这堆文件放到 “公网服务器” 上。  </p>
 <p>而GitHub就是免费的”公共服务器“</p>
-<p>1.你现在GitHub上创建一个仓库（名字必须是 你的用户名+github.io)，把public里的静态文件传到这个仓库里）</p>
-<p>2.GitHub就会把你给的文件托管起来，给你一个网址（就是你的用户名+github.io),让别人可以访问你的博客。</p>
-<p>但怎么把public里的静态文件传到GitHub仓库里呢，就用到了Git——Git是”电脑和GIthub传文件之间的桥梁“，你输入git push或者（hexo 封装的 hexo d），就能把静态文件传到仓库里）</p>
+<ol>
+<li><p>你现在GitHub上创建一个仓库(名字必须是 你的用户名+github.io)，把public里的静态文件传到这个仓库里）</p>
+</li>
+<li><p>GitHub就会把你给的文件托管起来，给你一个网址(就是你的用户名+github.io),让别人可以访问你的博客。</p>
+</li>
+</ol>
+<p>&nbsp;&nbsp;但怎么把public里的静态文件传到GitHub仓库里呢，就用到了Git——Git是”电脑和GIthub传文件之间的桥梁“，你输入git push或者（hexo 封装的 hexo d），就能把静态文件传到仓库里）</p>
 <h3 id="综上-我们需要的工具有："><a href="#综上-我们需要的工具有：" class="headerlink" title="综上!!!我们需要的工具有："></a>综上!!!我们需要的工具有：</h3><ol>
 <li><p>hexo 静态博客框架，把你写的Markdown文章、主题样式自动打包成博客需要的静态文件，不用手写HTML&#x2F;CS&#x2F;JS</p>
 </li>
