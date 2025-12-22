@@ -26,18 +26,17 @@
 <meta property="og:site_name" content="Lotus">
 <meta property="og:description" content="记录自己搭建博客的过程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512200913776.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201112606.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201125029.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201136232.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201136232.png">
 <meta property="article:published_time" content="2025-12-14T10:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-20T09:37:04.003Z">
+<meta property="article:modified_time" content="2025-12-22T11:44:30.612Z">
 <meta property="article:author" content="Lotus">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512200913776.png">
   
   
   
@@ -230,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4k 字
+          3.8k 字
         
       </span>
     
@@ -241,7 +240,7 @@
         
         
         
-          33 分钟
+          32 分钟
         
       </span>
     
@@ -352,8 +351,7 @@
 <p>之后可以在打卡powershell 中检查一下是否安装成功</p>
 <p>（两个命令）</p>
 <p>node -v</p>
-<p>npm -v<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote">&lt;span class&#x3D;”hint–top hint–rounded” aria-label&#x3D;”输入npm -v</p>
-<p>1.<br><img src="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png" srcset="/img/loading.gif" lazyload alt="image-20251212203853167">“&gt;[1]</span></a></sup></p>
+<p>npm -v</p>
 <p><em><strong>补充：</strong></em></p>
 <p><strong>Node Package Manager</strong> ，Node包管理器</p>
 <p>npm是**“前端 &#x2F; Node.js 领域的应用商店”**，搭建博客的整个过程中，它的作用贯穿始终，，Hexo 就被开发者上传到了这个仓库里</p>
@@ -424,27 +422,26 @@
 <p> <img src="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201125029.png" srcset="/img/loading.gif" lazyload alt="image-20251220112538287"></p>
 <p> deploy:<br>   type: git<br>   repo: （你的项目HTTPS地址）<br>   branch: main（你的默认分支）</p>
 </li>
-<li><p>推送到GitHub仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote">&lt;span class&#x3D;”hint–top hint–rounded” aria-label&#x3D;”打开网站404</p>
+<li><p>推送到GitHub仓库</p>
+<p> <code>hexo d</code></p>
 </li>
-<li></li>
+<li><p>打开网站查看效果 &lt;你的GitHub ID&gt;.github.io</p>
+</li>
 </ol>
-<p>原因：仓库名不是自己的  github用户名.github.io”&gt;[2]</span></a></sup></p>
-<pre><code class="hljs">`hexo d`
-</code></pre>
-<ol start="5">
-<li>打开网站查看效果 &lt;你的GitHub ID&gt;.github.io</li>
+<h1 id="我出现的问题以及解决"><a href="#我出现的问题以及解决" class="headerlink" title="我出现的问题以及解决"></a>我出现的问题以及解决</h1><ol>
+<li>输入npm -v<br><img src="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png" srcset="/img/loading.gif" lazyload alt="image-20251212203853167"></li>
 </ol>
-<h1 id="我出现的问题以及解决"><a href="#我出现的问题以及解决" class="headerlink" title="我出现的问题以及解决"></a>我出现的问题以及解决</h1><p>显示无法识别，执行不了</p>
+<p>显示无法识别，执行不了</p>
 <p>原因：该命令需要以管理员身份打开</p>
 <p>解决：点击下标 找到”Windows Powershell“  按住Ctrl 点击，进去之后就可以正常输出版本</p>
+<ol start="2">
+<li>打开网站404<br>原因：仓库名不是自己的  github用户名.github.io</li>
+</ol>
 <p>问题：更改后仍然404</p>
 <p>原因：仓库page分支未配置</p>
 <p>解决：仓库→Settings→Pages：选择main分支部署，路径选&#x2F;root</p>
 <p><img src="https://cdn.jsdelivr.net/gh/l61150643-eng/image-bed1@master/clash/202512201136232.png" srcset="/img/loading.gif" lazyload alt="image-20251220113639226"></p>
-<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>输入npm -v
-1.<img src="https://cdn.jsdelivr.net/gh/l61150643-eng/my_image_bed@master/note/202512122039173.png" srcset="/img/loading.gif" lazyload alt="image-20251212203853167">
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>打开网站4042.原因：仓库名不是自己的  github用户名.github.io
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+
                 
               </div>
             
