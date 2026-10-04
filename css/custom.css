@@ -1,33 +1,70 @@
-/* ===== 文章阅读区域 ===== */
+/* ==================================================
+   min's blog - 文章阅读页
+   天空背景 + Glassmorphism
+   ================================================== */
 
-/* 减弱大白卡片的悬浮感 */
-#board {
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+
+/* ---------- 1. 文章页面天空背景 ---------- */
+
+body {
+  background-image: url("/img/background/0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-/* 正文阅读体验 */
+
+/* ---------- 2. 主体毛玻璃卡片 ---------- */
+
+#board {
+  background: rgba(255, 255, 255, 0.68);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 22px;
+
+  box-shadow:
+    0 8px 32px rgba(31, 50, 70, 0.10);
+}
+
+
+/* ---------- 3. 正文阅读体验 ---------- */
+
 .markdown-body {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.01em;
 }
 
-/* 段落之间增加一点呼吸感 */
 .markdown-body p {
-  margin-bottom: 1.35em;
+  margin-bottom: 1.3em;
 }
 
-/* 标题不要那么粗、那么顶 */
+
+/* ---------- 4. 标题 ---------- */
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
   font-weight: 600;
-  margin-top: 1.8em;
 }
 
-/* 分割线淡一点 */
 .markdown-body h1,
 .markdown-body h2 {
-  border-bottom-color: #edf0f2;
+  border-bottom-color: rgba(80, 100, 120, 0.12);
+}
+
+
+/* ---------- 5. 目录稍微透明 ---------- */
+
+.toc-body {
+  background: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 15px;
 }
