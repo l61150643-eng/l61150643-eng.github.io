@@ -1,37 +1,72 @@
 /* ==================================================
-   min's blog - 文章阅读页
-   天空背景 + Glassmorphism
+   min's blog - Custom Style
+   浅色极简 + 蓝白光晕 + Glassmorphism
    ================================================== */
 
 
-/* ---------- 1. 文章页面天空背景 ---------- */
+/* ==================================================
+   0. 页面背景：浅色渐变 + 柔和光晕
+   ================================================== */
 
 body {
-  background-image: url("/img/background/0.jpg");
-  background-size: cover;
-  background-position: center;
+  background:
+    /* 左上方淡蓝色光晕 */
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(145, 200, 235, 0.22) 0%,
+      rgba(145, 200, 235, 0.08) 28%,
+      transparent 48%
+    ),
+
+    /* 右侧淡青色光晕 */
+    radial-gradient(
+      circle at 85% 45%,
+      rgba(170, 220, 220, 0.18) 0%,
+      rgba(170, 220, 220, 0.06) 30%,
+      transparent 50%
+    ),
+
+    /* 页面下方淡蓝色光晕 */
+    radial-gradient(
+      circle at 45% 90%,
+      rgba(180, 205, 235, 0.16) 0%,
+      transparent 45%
+    ),
+
+    /* 页面基础底色 */
+    #f7f9fb;
+
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 
-/* ---------- 2. 主体毛玻璃卡片 ---------- */
+/* ==================================================
+   1. 主体卡片：毛玻璃
+   ================================================== */
 
 #board {
-  background: rgba(255, 255, 255, 0.68);
+  /* 半透明白色 */
+  background: rgba(255, 255, 255, 0.62);
 
+  /* 毛玻璃模糊 */
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 22px;
+  /* 玻璃边缘 */
+  border: 1px solid rgba(255, 255, 255, 0.55);
 
+  /* 圆角 */
+  border-radius: 20px;
+
+  /* 很轻的阴影 */
   box-shadow:
-    0 8px 32px rgba(31, 50, 70, 0.10);
+    0 8px 30px rgba(40, 55, 70, 0.06);
 }
 
 
-/* ---------- 3. 正文阅读体验 ---------- */
+/* ==================================================
+   2. 正文基础排版
+   ================================================== */
 
 .markdown-body {
   font-size: 16px;
@@ -39,18 +74,48 @@ body {
   letter-spacing: 0.01em;
 }
 
+
+/* ==================================================
+   3. 正文段落
+   ================================================== */
+
 .markdown-body p {
+  margin-top: 0.8em;
   margin-bottom: 1.3em;
 }
 
 
-/* ---------- 4. 标题 ---------- */
+/* ==================================================
+   4. 正文标题
+   ================================================== */
 
 .markdown-body h1,
 .markdown-body h2,
-.markdown-body h3 {
+.markdown-body h3,
+.markdown-body h4 {
   font-weight: 600;
+  letter-spacing: 0.01em;
 }
+
+.markdown-body h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.markdown-body h2 {
+  margin-top: 1.8em;
+  margin-bottom: 0.9em;
+}
+
+.markdown-body h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+
+/* ==================================================
+   5. 标题分割线
+   ================================================== */
 
 .markdown-body h1,
 .markdown-body h2 {
@@ -58,13 +123,68 @@ body {
 }
 
 
-/* ---------- 5. 目录稍微透明 ---------- */
+/* ==================================================
+   6. 链接
+   ================================================== */
+
+.markdown-body a {
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==================================================
+   7. 引用块
+   ================================================== */
+
+.markdown-body blockquote {
+  background: rgba(245, 248, 250, 0.60);
+
+  border-left: 4px solid rgba(100, 140, 170, 0.45);
+
+  border-radius: 6px;
+
+  padding: 12px 18px;
+}
+
+
+/* ==================================================
+   8. 行内代码
+   ================================================== */
+
+.markdown-body code {
+  border-radius: 5px;
+}
+
+
+/* ==================================================
+   9. 正文图片
+   ================================================== */
+
+.markdown-body img {
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 18px rgba(30, 45, 60, 0.08);
+}
+
+
+/* ==================================================
+   10. 右侧目录 TOC：轻量毛玻璃
+   ================================================== */
 
 .toc-body {
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.35);
+
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  border-radius: 16px;
-  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.40);
+
+  border-radius: 14px;
+
+  padding: 14px;
 }
